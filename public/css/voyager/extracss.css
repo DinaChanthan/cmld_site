@@ -1,0 +1,7 @@
+.voyager .side-menu .navbar-header{
+    background: white !important;
+}
+.app-container .content-container .side-menu .navbar-header .navbar-brand .title{
+    color:#5a5959;
+    font-weight: 500;
+}

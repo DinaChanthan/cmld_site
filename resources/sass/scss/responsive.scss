@@ -1,0 +1,104 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .background-screen-res {
+        min-height: 250px;
+        z-index: 9;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+    .row-space-responsive{
+        margin-top: 0px;
+
+        h4{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    .search-sp-responsive{
+        height: 195px;
+    }
+    .background-screen-res-about{
+        min-height: 200px;
+        z-index: 9;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+    .contact-info-res{
+        margin-top: 0px;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .background-screen-res {
+        min-height: 500px;
+        z-index: 9;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+    .row-space-responsive{
+        margin-top: 195px;
+
+        h4{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    .search-sp-responsive{
+        height: 195px;
+    }
+    .background-screen-res-about{
+        min-height: 400px;
+    }
+    .contact-info-res{
+        margin-top: -150px;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+    .background-screen-res {
+        min-height: 651px;
+        z-index: 9;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+    .row-space-responsive{
+        margin-top: 195px;
+
+        h4{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    .search-sp-responsive{
+        height: 100px;
+    }
+    .contact-info-res{
+        margin-top: -150px;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+    .background-screen-res{
+        min-height: 900px;
+    }
+    .bk-news{
+        padding-top: 650px !important;
+    }
+}
+
+/* General screens -----------*/
+.container-responsive{
+    display:flex;
+    flex-wrap:wrap;
+
+    .box{
+        padding: 20px 15px 20px 15px;
+    }
+}
