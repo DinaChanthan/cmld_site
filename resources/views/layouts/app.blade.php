@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="{{asset('css/toastr.min.css')}}">
 		<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/lightslider.css') }}"> 
+		<link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}"> 
 		<!-- End CSS -->
 
 		{{-- Extra CSS --}}
@@ -78,6 +79,7 @@
 
 		<!-- JavaScript -->
 		<script src="{{ URL::to('js/scripts.js') }}"></script>
+		<script src="{{ URL::to('js/owl.carousel.js') }}"></script>
 		<!-- End JavaScript -->
 
 		<script src="{{asset('js/toastr.min.js')}}"></script>

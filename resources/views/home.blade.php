@@ -57,16 +57,11 @@
                                                 <li>                                                            
                                                     <a class="" href="javascript:void(0)" onclick="insertDataDropdownProject('0','{{ strip_tags($wordings[20]->word) }}')">{{ strip_tags($wordings[20]->word) }}</a>                                                            	
                                                 </li>   
-                                                
-                                                @foreach ($projects as $project)
-                                                @php
-                                                    $project_en = $project->translate('en','fallBackLocale');
-                                                    $project = $project->translate(session()->get('locale'),'fallBackLocale');
-                                                @endphp
-                                                    <li>                                                            
-                                                        <a class="" href="javascript:void(0)" onclick="insertDataDropdownProject( '{{$project_en->name}}','{{ strip_tags($project->name) }}')">{{ strip_tags($project->name) }}</a>
-                                                    </li>    
-                                                @endforeach                                                           																				
+                                                <li>                                                            
+                                                    <a class="" href="javascript:void(0)" onclick="insertDataDropdownProject( '{{strip_tags($wordings[96]->word)}}','{{ strip_tags($wordings[96]->word) }}')">{{ strip_tags(($wordings[96]->word)) }}</a>
+                                                    <a class="" href="javascript:void(0)" onclick="insertDataDropdownProject( '{{strip_tags($wordings[97]->word)}}','{{ strip_tags($wordings[97]->word) }}')">{{ strip_tags(($wordings[97]->word)) }}</a>
+                                                    <a class="" href="javascript:void(0)" onclick="insertDataDropdownProject( '{{strip_tags($wordings[98]->word)}}','{{ strip_tags($wordings[98]->word) }}')">{{ strip_tags(($wordings[98]->word)) }}</a>
+                                                </li>   
                                             </ul>
                                         </div> 
                                     </div>     
@@ -90,17 +85,15 @@
                                                 <li>                                                            
                                                     <a class="" href="javascript:void(0)" onclick="insertDataDropdownLocation('0','{{ strip_tags($wordings[20]->word) }}')">{{ strip_tags($wordings[20]->word) }}</a>                                                            	
                                                 </li>
-                                                @foreach ($locations as $location)
-                                                    @php
-                                                        $location_en = $location->translate('en', 'fallbackLocale');
-                                                        $location = $location->translate($locale, 'fallbackLocale');
-                                                    @endphp
-                                                    <li>
-                                                        <a class="" href="javascript:void(0)" onclick="insertDataDropdownLocation('{{$location_en->name}}','{{strip_tags($location->name)}}')">{{strip_tags($location->name)}}</a>
-                                                    </li>
-                                                @endforeach                                                       																				
+                                            
+                                                <li>                                                            
+                                                    <a id="location_{{ strip_tags($wordings[99]->id) }}" class="" href="javascript:void(0)" onclick="insertDataDropdownLocation('{{ strip_tags($wordings[99]->word) }}','{{ strip_tags($wordings[99]->word) }}')">{{ strip_tags($wordings[99]->word) }}</a>   
+                                                    <a id="location_{{ strip_tags($wordings[100]->id) }}" class="" href="javascript:void(0)" onclick="insertDataDropdownLocation('{{ strip_tags($wordings[100]->word) }}','{{ strip_tags($wordings[100]->word) }}')">{{ strip_tags($wordings[100]->word) }}</a> 
+                                                    <a id="location_{{ strip_tags($wordings[101]->id) }}" class="" href="javascript:void(0)" onclick="insertDataDropdownLocation('{{ strip_tags($wordings[101]->word) }}','{{ strip_tags($wordings[101]->word) }}')">{{ strip_tags($wordings[101]->word) }}</a> 
+                                                    <a id="location_{{ strip_tags($wordings[102]->id) }}" class="" href="javascript:void(0)" onclick="insertDataDropdownLocation('{{ strip_tags($wordings[102]->word) }}','{{ strip_tags($wordings[102]->word) }}')">{{ strip_tags($wordings[102]->word) }}</a>                                                	
+                                                </li>
                                             </ul>
-                                        </div> 
+                                        </div>                                           
                                     </div>     
                                 </div>        
                             </div>
@@ -121,15 +114,13 @@
                                                 <li>                                                            
                                                     <a class="" href="javascript:void(0)" onclick="insertDataDropdownType('0','{{ strip_tags($wordings[20]->word) }}')">{{ strip_tags($wordings[20]->word) }}</a>                                                            	
                                                 </li>
-                                                @foreach ($propertytypes  as $propertytype)
-                                                @php
-                                                    $propertytype_en = $propertytype->translate('en','fallBackLocale');
-                                                    $propertytype = $propertytype->translate($locale,'fallBackLocale');
-                                                @endphp
+                                            
                                                 <li>                                                           	 
-                                                    <a class="" href="javascript:void(0)" onclick="insertDataDropdownType('{{$propertytype_en->name}}','{{ $propertytype->name }}')">{{strip_tags($propertytype->name)}}</a>
+                                                    <a class="" href="javascript:void(0)" onclick="insertDataDropdownType('{{strip_tags($wordings[103]->word)}}','{{ strip_tags($wordings[102]->word) }}')">{{strip_tags($wordings[103]->word)}}</a>
+                                                    <a class="" href="javascript:void(0)" onclick="insertDataDropdownType('{{strip_tags($wordings[104]->word)}}','{{ strip_tags($wordings[102]->word) }}')">{{strip_tags($wordings[104]->word)}}</a>
+                                                    <a class="" href="javascript:void(0)" onclick="insertDataDropdownType('{{strip_tags($wordings[105]->word)}}','{{ strip_tags($wordings[102]->word) }}')">{{strip_tags($wordings[105]->word)}}</a>
                                                 </li>  
-                                                @endforeach                                                  																		
+                                                                          																		
                                             </ul>
                                         </div> 
                                     </div>     
@@ -340,5 +331,10 @@
 <!-- Clear -->
 <div class="clear"></div>
 <!-- End Clear -->
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    function insertDataDropdownLocation(){
+        
+    }
+</script>
 @endsection

@@ -16,6 +16,8 @@
     $facility = $projects->facility->translate($locale, 'fallbackLocale');
 @endphp
 
+
+
 <!-- Section I -->
 <div class="container no-margin-padding width-100">
     <div class="row no-margin-padding width-100">	
@@ -211,17 +213,16 @@
     </div>    	    
 </div>
 
-<div class="item">            
-    <div class="clearfix" style="max-width: 100%;">
-        <ul id="image-gallery" class="content-slider">
-            @foreach($projects->projectimage as $projectimage)
-            <li data-thumb="{{ Voyager::image($projectimage->image) }}"> 
-                <img src="{{ Voyager::image($projectimage->image) }}" alt="{{ $projectimage->title }}" />
-            </li>
-            @endforeach 
-        </ul>
-    </div>
-</div>
+         
+<div class=" owl-theme">
+    <li class="owl-carousel">
+        <iframe data-merge="2" width="560" height="315" src="https://www.youtube.com/embed/ebCoqkrxLF0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe data-merge="2" width="560" height="315" src="https://www.youtube.com/embed/BHmOiy3WQMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe data-merge="2" width="560" height="315" src="https://www.youtube.com/embed/ZsDpEqLnxbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe data-merge="2" width="560" height="315" src="https://www.youtube.com/embed/ZsDpEqLnxbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </li>
+</div>   
+
 <!-- End Facility Section -->
     
 <div class="container no-margin-padding width-100">
@@ -552,6 +553,25 @@ $(document).ready(function() {
     };
 </script>
 
+<script>
+    $('.owl-carousel').owlCarousel({
+        items:1,
+        merge:false,
+        loop:true,
+        margin:10,
+        video:true,
+        lazyLoad:true,
+        center:false,
+        responsive:{
+            480:{
+                items:2
+            },
+            600:{
+                items:4
+            }
+        }
+    })
+</script>
 <!-- <script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script> --> 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALs_IVe8MbehimtbG7mX49d42uuIQSVNU&callback=ViewCustInGoogleMap"></script>
 

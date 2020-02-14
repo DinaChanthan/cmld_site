@@ -47,11 +47,11 @@
                                                         @php
                                                             $project_en = $project->translate('en','fallBackLocale');
                                                             $project = $project->translate(session()->get('locale'),'fallBackLocale');
-                                                            $project_en->name == Request::get('project') ? $selectedproject = $project->name : "";
+                                                            // $project_en->name == Request::get('project') ? $selectedproject = $wordings[96]->word : "";
                                                         @endphp
                                                     @endforeach
                                                     
-                                                    {{ Request::get('project') ? $selectedproject : strip_tags($wordings[20]->word) }}
+                                                    {{-- {{ Request::get('project') ? $selectedproject : strip_tags($wordings[20]->word) }} --}}
                                                     
                                                     </span>
                                                     <span class="glyphicon glyphicon-menu-down"></span>
@@ -90,11 +90,11 @@
                                                         @php
                                                             $location_en = $location->translate('en', 'fallbackLocale');
                                                             $location = $location->translate($locale, 'fallbackLocale');
-                                                            Request::get('location') == $location_en->name ? $selectedlocation = $location->name : "";
+                                                            // Request::get('location') == $location_en->name ? $selectedlocation = $location->name : "";
                                                         @endphp
                                                         @endforeach 
 
-                                                        {{ Request::get('location') ? $selectedlocation : strip_tags($wordings[20]->word) }}
+                                                        {{-- {{ Request::get('location') ? $selectedlocation : strip_tags($wordings[20]->word) }} --}}
                                                     </span>
                                                     <span class="glyphicon glyphicon-menu-down"></span>
                                                 </button>
@@ -134,7 +134,7 @@
                                                             $propertytype_en->name == Request::get('propertytype') ? $selectedproptype = $propertytype->name : "";
                                                         @endphp
                                                         @endforeach
-                                                        {{ Request::get('propertytype') ? $selectedproptype : strip_tags($wordings[20]->word) }}
+                                                        {{-- {{ Request::get('propertytype') ? $selectedproptype : strip_tags($wordings[20]->word) }} --}}
                                                     </span>                                                      
                                                     <span class="glyphicon glyphicon-menu-down"></span>
                                                 </button>
